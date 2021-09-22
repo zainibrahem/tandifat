@@ -12,7 +12,10 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-rtl'),
+
+  ],
   theme:{
     extend:{
       colors:{
@@ -26,10 +29,14 @@ module.exports = {
       textColor:{
         'blacks':"#3B3B3B"
       },
+      fontSize:{
+        'xxs':'10px'
+      },
       padding:{
         '100px':'100px',
         '80px':'80px'
       },
+      height:"70vh",
       margin:{
         '100px':'100px'
       },

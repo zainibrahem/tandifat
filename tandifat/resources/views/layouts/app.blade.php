@@ -35,7 +35,7 @@
 <body>
     <div id="app">
         <div class="min-h-screen ">
-            <div class="header  w-full px-80px">
+            <div class="header hidden md:block w-full px-80px">
                 <div class="section w-full h-full flex flex-col justify-between  items-center">
                     <div class="flex justify-between items-center w-full py-4">
                         <img src="{{asset('imgs/logo.png')}}" class="w-56" alt="">
