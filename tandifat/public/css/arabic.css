@@ -1,0 +1,68 @@
+/* *{
+    text-align: right !important;
+}
+button{
+    text-align: center !important;
+}
+.text-center{
+    text-align: center !important;
+}
+.select2-selection--single{
+    background: linear-gradient(180deg, #BB3A7D 0%, #107774 100%) !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius:10px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius:0px !important;
+    flex-direction: row-reverse !important;
+    
+}
+.right-3{
+    left:0.75rem;
+    right:auto !important;
+}
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered{
+    padding-right:20px !important;
+    padding-left:8px !important;
+}
+.ml-2{
+    margin-right:0.5rem !important;
+    margin-left: 0px;
+}
+.ml-4 {
+    margin-right:1rem !important;
+    margin-left: auto !important;
+}
+.pl-20{
+    padding-left: 0px !important;
+    padding-right: 5rem !important;
+}
+.left-1\/2{
+    left:0px !important;
+    right:50% !important;   
+}
+
+
+
+@media (min-width: 768px){
+    .md\:pl-48{
+        padding-left: 0px !important;
+        padding-right: 12rem !important;
+    }
+    .md\:left-1\/2{
+        left:0px !important;
+        right:50% !important;   
+    }
+    .md\:mr-10 {
+        margin-left: 2.5rem !important;
+        margin-right: 0px !important;
+    }
+} */
+
+
+.badges{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 45px;
+    border-bottom-left-radius: 45px;
+    left:101%;
+}

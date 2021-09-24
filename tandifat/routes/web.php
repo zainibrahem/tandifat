@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Config;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['web']], function () {
+
+Route::get('/lang/{lang}',function($lang){
+    if (in_array($lang, \Config::get('app.locales'))) {
+        Session::put('locale', $lang);
+
+      }
+      return redirect()->back();
+});
+});

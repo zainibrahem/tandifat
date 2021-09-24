@@ -23,7 +23,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    @if(App::getLocale() == 'ar')
+        <link rel="stylesheet" href="{{asset('css/arabic.css')}}">  
+    @endif
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -32,17 +34,25 @@
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
 
 </head>
-<body>
+@php 
+if(App::getLocale()=='ar'){
+    echo '<body  dir="rtl">'   ;
+    }
+    else{
+        echo '<body   dir="ltr">'   ;
+    }
+
+@endphp
     <div id="app">
         <div class="min-h-screen ">
-            <div class="header hidden md:block w-full px-80px">
+            <div class="header hidden md:block w-full px-60px xl:px-80px">
                 <div class="section w-full h-full flex flex-col justify-between  items-center">
                     <div class="flex justify-between items-center w-full py-4">
                         <img src="{{asset('imgs/logo.png')}}" class="w-56" alt="">
                         <div class="relative flex justify-items-stretch items-center">
                             <div class="relative  flex justify-between items-center">
                                 <input type="text" class="w-72 relative placeholder-black font-bold px-5 py-2 text-black"
-                                    placeholder="What do you need?"
+                                    placeholder="{{__('front.What do you need?')}}"
                                     style="background: #FFFFFF;box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);border-radius: 10px;">
                                 <svg width="30" class="absolute right-3" height="30" viewBox="0 0 45 45" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -54,9 +64,9 @@
                             <select
                                 class="js-example-basic-single relative self-stretch -left-2 flex justify-between items-center z-10 w-28 text-white py-2 px-2 text-sm"
                                 name="state" style="">
-                                <option value="AL">Lebanon</option>
-                                <option value="WY">Syria</option>
-                                <option value="WY">Jordan</option>
+                                <option value="LB">{{__('front.Lebanon')}}</option>
+                                <option value="SY">{{__('front.Syria')}}</option>
+                                <option value="WY">{{__('front.Jordan')}}</option>
                                 <option value="WY">Iraq</option>
                                 <option value="WY">UAE</option>
                                 <option value="WY">SA</option>
@@ -69,7 +79,7 @@
                                 <span class="cursor-pointer">
                                     LBP
                                 </span>
-                                <svg class="ml-2 cursor-pointer" width="10" height="8" viewBox="0 0 13 8" fill="none"
+                                <svg class="rtl:mr-2 rtl:ml-3 ltr:ml-2 cursor-pointer" width="10" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12.642 0.453331C12.4086 0.205383 12.0424 0.183159 11.787 0.392385L11.7202 0.45519L6.03875 6.56023C5.78421 6.8335 5.78508 7.27502 6.04049 7.54644C6.16732 7.68122 6.33412 7.75 6.50005 7.75C6.63977 7.75 6.77888 7.70223 6.89477 7.60724L6.96134 7.54458L12.6428 1.43954C12.8974 1.16627 12.8965 0.724748 12.642 0.453331ZM1.28055 0.455283C1.02602 0.181077 0.613372 0.182936 0.358834 0.453424C0.124712 0.702223 0.104472 1.09395 0.298114 1.36801L0.356228 1.43964L4.12911 5.49417C4.25595 5.63081 4.42361 5.69959 4.59041 5.69959C4.75634 5.69959 4.92313 5.63081 5.04996 5.49603C5.28409 5.24723 5.30433 4.8555 5.11069 4.58144L5.05257 4.50981L1.28055 0.455283Z"
@@ -81,27 +91,27 @@
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">LBP</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">LBP</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">SYP</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">SYP</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">USD</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">USD</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">LBP</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">LBP</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">SYP</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">SYP</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">USD</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">USD</span></li>
                                     </ul>
                                 </div>
                             </span>
@@ -117,7 +127,7 @@
                                         d="M1.24443 23.4335C2.29516 28.3097 5.18182 32.4849 9.37279 35.1901C12.4286 37.1623 15.9102 38.181 19.4628 38.1809C30.3424 38.1537 38.4502 29.2039 38.169 18.9806C38.0632 15.2916 36.8887 11.7524 34.7726 8.74523C34.563 8.44754 34.1518 8.37617 33.8541 8.58553C33.5564 8.79506 33.4849 9.2063 33.6944 9.50398C34.4532 10.5823 35.0763 11.7228 35.5637 12.9031C33.9509 13.1066 32.5663 13.0527 31.2258 12.0794C30.1159 11.3862 28.5958 10.4369 26.9455 12.1991C26.2858 13.2023 25.2633 14.3588 23.8241 14.353C22.6747 14.3956 21.4855 13.7169 20.9338 12.6502C20.3157 11.6234 20.2023 10.2725 20.6579 9.36503C20.9802 8.72299 21.5466 8.35772 22.3415 8.27923C24.5637 8.03393 25.7384 5.32735 25.3759 3.16288C26.603 3.6069 27.7888 4.19251 28.9123 4.9176C29.9524 5.589 30.9194 6.36894 31.7865 7.23571C32.044 7.49314 32.4614 7.49314 32.7186 7.23562C32.9761 6.97819 32.976 6.5608 32.7186 6.30346C24.071 -2.26954 10.139 -0.437551 3.80995 9.37276C1.10486 13.5637 0.1937 18.5572 1.24443 23.4335ZM15.8441 2.53323C18.5798 1.94366 21.355 2.01969 23.9821 2.72474C24.3566 4.2303 23.9624 6.67365 22.2049 6.968C20.9698 7.09201 20.0021 7.73299 19.4796 8.77353C18.8235 10.0805 18.9516 11.906 19.7981 13.3199C20.5673 14.7671 22.1892 15.7288 23.8619 15.6709C25.6052 15.644 26.9842 14.5442 27.9407 13.0655C28.7957 12.1737 29.3262 12.4475 30.5275 13.1977C31.9827 14.3335 34.1772 14.4791 36.0337 14.1812C37.6091 19.049 36.9685 24.4408 34.0823 28.9123C31.5682 32.8074 27.6878 35.4903 23.1557 36.4668C21.5043 36.8227 19.8384 36.9353 18.1993 36.8145C18.164 36.3444 18.1086 35.8599 18.0506 35.3545C17.8195 33.3413 17.5805 31.2596 18.6206 29.8169C19.587 28.4309 20.2063 26.9074 19.9699 25.1173C19.9462 24.7539 19.632 24.4784 19.2693 24.5023C18.9061 24.5259 18.6307 24.8396 18.6543 25.2029C18.8748 26.4469 18.3776 27.9258 17.5512 29.0459C16.2125 30.9027 16.4931 33.3477 16.7408 35.5049C16.7869 35.9062 16.8299 36.292 16.863 36.6636C14.478 36.2981 12.1755 35.4301 10.0876 34.0823C6.19248 31.5683 3.50954 27.6878 2.53308 23.1558C2.19479 21.586 2.07569 20.0032 2.16851 18.4427C3.20649 18.3227 4.49391 18.2176 5.1181 18.7315C5.37017 18.939 5.50878 19.2575 5.54209 19.7056C5.632 20.9109 6.55608 21.73 7.24329 22.2415C9.69464 23.6291 11.8728 22.0473 13.4287 20.6718C14.2484 19.866 15.3883 19.1183 16.6899 19.5838C17.3511 19.7996 17.8659 20.2425 18.1394 20.8308C18.2306 21.0071 18.3121 21.0799 18.4506 22.1623C18.4917 22.5241 18.8181 22.7839 19.1799 22.7429C19.5417 22.7019 19.8016 22.3753 19.7605 22.0136C19.6606 21.1332 19.5231 20.581 19.317 20.2372C18.8838 19.3328 18.0977 18.6565 17.0991 18.3305C15.4079 17.7721 13.8934 18.3823 12.5775 19.6648C11.0868 20.925 9.7973 22.0151 7.98192 21.1474C7.24197 20.588 6.89428 20.1115 6.85675 19.6078C6.79628 18.7932 6.49332 18.156 5.95605 17.7136C4.99409 16.9215 3.52782 16.9718 2.30192 17.1012C2.64496 14.6314 3.52492 12.2451 4.91736 10.0878C7.43173 6.19263 11.3122 3.50969 15.8441 2.53323Z"
                                         fill="black" stroke="#3B3B3B" stroke-width="1.5" />
                                 </svg>
-                                <svg class="ml-2 cursor-pointer" width="10" height="8" viewBox="0 0 13 8" fill="none"
+                                <svg class="rtl:mr-2  ltr:ml-2 cursor-pointer" width="10" height="8" viewBox="0 0 13 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M12.642 0.453331C12.4086 0.205383 12.0424 0.183159 11.787 0.392385L11.7202 0.45519L6.03875 6.56023C5.78421 6.8335 5.78508 7.27502 6.04049 7.54644C6.16732 7.68122 6.33412 7.75 6.50005 7.75C6.63977 7.75 6.77888 7.70223 6.89477 7.60724L6.96134 7.54458L12.6428 1.43954C12.8974 1.16627 12.8965 0.724748 12.642 0.453331ZM1.28055 0.455283C1.02602 0.181077 0.613372 0.182936 0.358834 0.453424C0.124712 0.702223 0.104472 1.09395 0.298114 1.36801L0.356228 1.43964L4.12911 5.49417C4.25595 5.63081 4.42361 5.69959 4.59041 5.69959C4.75634 5.69959 4.92313 5.63081 5.04996 5.49603C5.28409 5.24723 5.30433 4.8555 5.11069 4.58144L5.05257 4.50981L1.28055 0.455283Z"
@@ -126,22 +136,26 @@
                                 <div
                                     class="dropdown hidden px-3 py-1 absolute bottom-0 left-0 -translate-x-1/2 transform translate-y-full">
                                     <ul class="flex flex-col justify-between items-start">
+                                        <a href="/lang/ar">
+                                            <li
+                                            class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
+                                            <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
+                                                class="rtl:mr-2  ltr:ml-2">AR</span></li>
+                                        </a>
+                                        <a href="/lang/en">
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">AR</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">EN</span></li>
+                                        </a>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">EN</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">SP</span></li>
                                         <li
                                             class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">SP</span></li>
-                                        <li
-                                            class="flex justify-start items-center w-16 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
-                                            <img class="w-6" src="{{asset('imgs/flags/lebanon.png')}}" alt=""> <span
-                                                class="ml-2">GR</span></li>
+                                                class="rtl:mr-2  ltr:ml-2">GR</span></li>
                                     </ul>
                                 </div>
                             </span>
@@ -168,7 +182,7 @@
             
             
             
-                                            <span class="ml-8">My Profile</span></li>
+                                            <span class="rtl:mr-8  ltr:ml-8">{{__('front.My Profile')}}</span></li>
                                         <li
                                             class="flex justify-start items-center w-36 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <svg width="20" height="26" viewBox="0 0 31 29" fill="none"
@@ -181,7 +195,7 @@
             
             
             
-                                            <span class="ml-8">Favorite</span></li>
+                                            <span class="rtl:mr-8  ltr:ml-8">{{__('front.Favorite')}}</span></li>
                                         <li
                                             class="flex justify-start items-center w-36 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <svg width="20" height="26" viewBox="0 0 25 29" fill="none"
@@ -194,7 +208,7 @@
             
             
             
-                                            <span class="ml-8">Compare</span></li>
+                                            <span class="rtl:mr-8  ltr:ml-8">{{__('front.Compare')}}</span></li>
                                         <li
                                             class="flex justify-start items-center w-36 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <svg width="20" height="26" viewBox="0 0 31 31" fill="none"
@@ -206,7 +220,7 @@
             
             
             
-                                            <span class="ml-8">Cart</span></li>
+                                            <span class="rtl:mr-8  ltr:ml-8">{{__('front.Cart')}}</span></li>
                                         <li
                                             class="flex justify-start items-center w-36 mt-2 cursor-pointer text-left hover:text-primary hover:bg-hoverback">
                                             <svg width="20" height="26" viewBox="0 0 31 28" fill="none"
@@ -238,7 +252,7 @@
             
             
             
-                                            <span class="ml-8">SignOut</span></li>
+                                            <span class="rtl:mr-8  ltr:ml-8">{{__('front.SignOut')}}</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -266,14 +280,14 @@
                                     </clipPath>
                                     </defs>
                                 </svg>
-                                <span class="ml-4 text-blacks">Dry Cleaning</span>
+                                <span class="ml-4 text-blacks">{{__('front.Dry Cleaning')}}</span>
                             </li>
                             <li class="flex justify-between items-center cursor-pointer">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M20.8084 22.8419C20.7145 22.8615 20.6219 22.8852 20.5307 22.9129C19.965 22.1617 19.1579 21.6521 18.2648 21.4543L18.8705 20.2826L20.1028 19.0513C21.0454 18.1081 21.0454 16.5734 20.1028 15.6302L18.7862 14.313L25.4833 7.61221C25.4891 7.60687 25.4951 7.60207 25.5007 7.5965C25.5064 7.59082 25.5113 7.58461 25.5168 7.57875L28.12 4.97408C28.1201 4.97402 28.1201 4.97396 28.1202 4.97396C28.1202 4.97391 28.1202 4.97385 28.1203 4.97379L29.3415 3.75187C30.1985 2.89676 30.199 1.50217 29.3421 0.642598C28.9279 0.228164 28.3759 0 27.7875 0C27.7871 0 27.7865 0 27.786 0C27.1979 0.000410156 26.6466 0.228809 26.2342 0.642598L25.0127 1.86475C25.0127 1.86475 25.0127 1.86475 25.0126 1.86475L25.0125 1.8648L22.4087 4.47C22.4031 4.47527 22.397 4.48008 22.3915 4.48559C22.3858 4.49127 22.3809 4.49736 22.3755 4.50322L20.899 5.98061C20.6702 6.20953 20.6703 6.58049 20.8991 6.8093C21.128 7.03799 21.499 7.03793 21.7278 6.80906L22.8065 5.72977L24.2572 7.18125L17.9578 13.4841L16.5071 12.0326L18.0095 10.5294C18.2383 10.3004 18.2382 9.92947 18.0093 9.70066C17.7803 9.47191 17.4094 9.47197 17.1806 9.7009L15.6786 11.2037L14.3625 9.88693C13.9074 9.4316 13.3001 9.18082 12.6525 9.18082C12.0048 9.18082 11.3976 9.4316 10.9422 9.88723L9.71171 11.12L7.33896 12.3496C7.33644 12.3509 7.33392 12.3521 7.33146 12.3534L5.04601 13.5378C5.03593 13.5427 5.02603 13.5478 5.01619 13.5532L1.32859 15.4642C0.536871 15.8741 0.107789 16.3585 0.0166755 16.9452C-0.0714495 17.5129 0.186539 18.1036 0.783375 18.7007L2.40625 20.325C2.41228 20.3316 2.41873 20.3375 2.425 20.3438L6.03724 23.9592L9.63988 27.5626C9.64884 27.5722 9.6581 27.5815 9.66777 27.5905L11.2926 29.2158C11.8136 29.737 12.3295 29.9999 12.8296 29.9999C12.9026 29.9999 12.9753 29.9943 13.0475 29.9831C13.6342 29.8921 14.1186 29.4627 14.5282 28.6705L14.7943 28.1561C14.9423 28.2898 15.1011 28.4136 15.2708 28.5254C15.9154 28.9501 16.6535 29.1699 17.4073 29.1699C17.6716 29.1699 17.9379 29.1428 18.2027 29.0882C18.7028 28.9853 19.1755 28.7865 19.5933 28.5057C20.3064 29.0222 21.2053 29.221 22.0854 29.0399C22.9131 28.8694 23.6246 28.3867 24.089 27.6807C24.5533 26.975 24.7151 26.1307 24.5446 25.3035C24.1935 23.5961 22.5185 22.4916 20.8084 22.8419ZM27.7868 1.17188H27.7875C28.0627 1.17188 28.3204 1.27811 28.5127 1.47047C28.9131 1.87213 28.9136 2.52346 28.5132 2.92295L27.7059 3.73066L26.2552 2.27918L27.0635 1.47041C27.2553 1.27811 27.5121 1.17205 27.7868 1.17188ZM23.635 4.90084L25.4268 3.10805L26.8775 4.55953L25.0857 6.35232L23.635 4.90084ZM14.6139 22.5534L6.28222 14.2172L7.49593 13.5882L15.6762 21.773C15.275 21.9731 14.9173 22.2386 14.6139 22.5534ZM9.95095 12.3159L17.6747 20.0439L16.9799 21.3879C16.9704 21.3889 16.9609 21.39 16.9514 21.3911L8.58742 13.0225L9.95095 12.3159ZM11.7714 10.7154C12.0051 10.4815 12.3181 10.3528 12.6526 10.3528C12.987 10.3528 13.3 10.4815 13.5338 10.7154L19.2739 16.4586C19.7601 16.945 19.7601 17.7365 19.2742 18.2226L18.3922 19.104L10.8904 11.598L11.7714 10.7154ZM13.4874 28.1322C13.2742 28.5446 13.0484 28.7972 12.868 28.8251C12.6979 28.8518 12.426 28.692 12.1216 28.3873L10.785 27.0504L12.0648 24.5801C12.2137 24.2928 12.1014 23.9392 11.8141 23.7904C11.5267 23.6415 11.1731 23.7537 11.0243 24.0411L9.91574 26.1809L7.28136 23.5459L9.13603 21.6848C9.36443 21.4556 9.36378 21.0846 9.13457 20.8562C8.90535 20.6278 8.53433 20.6283 8.30593 20.8576L6.45296 22.717L3.81718 20.079L5.95638 18.9695C6.24367 18.8205 6.35576 18.4669 6.20675 18.1796C6.05781 17.8924 5.70402 17.7802 5.41685 17.9292L2.94841 19.2094L1.61253 17.8724C1.30796 17.5677 1.14847 17.2952 1.1749 17.125C1.20296 16.9443 1.45539 16.7183 1.86777 16.5049L5.1908 14.7828L13.9281 23.5249C13.5504 24.2806 13.4124 25.163 13.5952 26.0534C13.6753 26.4418 13.8115 26.8093 13.9969 27.1474L13.4874 28.1322ZM23.1103 27.0367C22.818 27.4811 22.3701 27.7849 21.8494 27.8922C21.186 28.0289 20.5053 27.8223 20.0287 27.3401C19.8096 27.1185 19.4554 27.107 19.2225 27.3142C18.8705 27.6272 18.4362 27.8439 17.9662 27.9405C17.2528 28.0879 16.5246 27.9481 15.9157 27.547C15.3068 27.1457 14.8902 26.5312 14.7429 25.8172C14.4399 24.3411 15.3925 22.8939 16.8664 22.591C16.8665 22.591 16.8665 22.591 16.8667 22.5909C17.0522 22.5527 17.2378 22.5342 17.4215 22.5342C18.3903 22.5342 19.2999 23.0504 19.7926 23.9202C19.9459 24.1909 20.2841 24.2946 20.5628 24.1563C20.715 24.0809 20.8783 24.0245 21.0459 23.9895C22.121 23.7694 23.1758 24.4648 23.3971 25.5401C23.5044 26.0609 23.4026 26.5924 23.1103 27.0367Z" fill="#3B3B3B"/>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Cleaning</span>
+                                <span class="ml-4 text-blacks">{{__('front.Cleaning')}}</span>
                             </li>
                             <li class="flex justify-between items-center cursor-pointer">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -294,7 +308,7 @@
                                     <path d="M4.21875 3.28125H5.15625V4.21875H4.21875V3.28125Z" fill="#3B3B3B"/>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Products</span>
+                                <span class="ml-4 text-blacks">{{__('front.Products')}}</span>
                             </li>
                             <li class="flex justify-between items-center cursor-pointer">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -315,7 +329,7 @@
                                     <path d="M26.7188 12.1875H27.6562V13.125H26.7188V12.1875Z" fill="#3B3B3B"/>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Providers</span>
+                                <span class="ml-4 text-blacks">{{__('front.Providers')}}</span>
                             </li>
                             <li class="flex justify-between items-center cursor-pointer">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -341,7 +355,7 @@
                                     <path d="M25.3125 7.5H26.25V8.4375H25.3125V7.5Z" fill="#3B3B3B"/>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Sterilization</span>
+                                <span class="ml-4 text-blacks">{{__('front.Sterilization')}}</span>
                             </li>
             
                             <li class="flex justify-between items-center cursor-pointer">
@@ -370,7 +384,7 @@
                                     </defs>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Commercial</span>
+                                <span class="ml-4 text-blacks">{{__('front.Commercial')}}</span>
                             </li>
                             <li class="flex justify-between items-center cursor-pointer">
                                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -383,7 +397,7 @@
                                     <path d="M20.9273 19.9644C20.8285 19.9644 20.7296 19.9621 20.6305 19.9572C19.7703 19.9149 18.9382 19.6937 18.1574 19.3C18.0129 19.2271 17.9547 19.0508 18.0276 18.9065C18.1005 18.762 18.2767 18.7037 18.4211 18.7767C19.1285 19.1335 19.8814 19.3337 20.6593 19.3719C22.7736 19.4767 24.8184 18.3451 25.8662 16.4915C27.0218 14.4469 26.7402 11.7811 25.1816 10.0088C25.0162 9.82068 24.8364 9.64197 24.6472 9.47708C24.1415 10.3253 23.2433 11.2568 22.0414 11.6263C21.9226 11.663 21.7936 11.6204 21.7196 11.5202C21.6457 11.4202 21.6431 11.2843 21.7131 11.1815C21.7503 11.1267 21.7924 11.0698 21.8352 11.0121C21.9085 10.9133 21.9843 10.8111 22.0247 10.7295C22.0277 10.7234 22.0309 10.7173 22.0344 10.7114C22.7318 9.51587 22.8075 8.03743 22.232 6.8529C21.7927 5.94892 20.9841 5.13903 19.76 4.3772C19.4154 4.16263 19.0577 3.96704 18.7013 3.78399C19.0342 4.62271 19.1735 5.55563 19.0797 6.40665C19.0099 7.04005 18.7957 7.65775 18.46 8.19294C18.2485 8.53032 18.0317 8.79528 17.7971 9.00294C17.6871 9.10044 17.5734 9.1929 17.4636 9.2822L17.3619 9.36517C16.719 9.89251 16.1908 10.5764 15.8347 11.3429C15.7665 11.4897 15.5922 11.5533 15.4455 11.4851C15.2988 11.4169 15.2352 11.2427 15.3034 11.0959C15.6964 10.2501 16.2798 9.4949 16.9903 8.91212L17.0939 8.82763C17.199 8.74208 17.3079 8.65361 17.4089 8.56419C17.6009 8.39415 17.7825 8.17091 17.9638 7.88169C18.2526 7.42079 18.4372 6.88864 18.4974 6.34243C18.6089 5.33216 18.3502 4.19063 17.8057 3.28864C17.7386 3.17767 17.7526 3.03563 17.84 2.93977C17.9274 2.84403 18.0674 2.81696 18.1842 2.87356C18.798 3.17087 19.4491 3.49337 20.0699 3.87962C21.3906 4.70181 22.2702 5.59056 22.7591 6.59673C23.3654 7.84454 23.344 9.37255 22.72 10.6691C23.4593 10.1979 24.0009 9.49607 24.2976 8.89548C24.3365 8.81685 24.4085 8.75966 24.494 8.73986C24.5796 8.72029 24.6693 8.73962 24.7388 8.79294C24.8292 8.86243 24.922 8.93884 25.0146 9.01982C25.2289 9.20497 25.4336 9.40782 25.6217 9.62169C27.3424 11.578 27.6527 14.5215 26.3764 16.7796C25.2693 18.7377 23.1545 19.9644 20.9273 19.9644Z" fill="#3B3B3B"/>
                                     </svg>
                                     
-                                <span class="ml-4 text-blacks">Best</span>
+                                <span class="ml-4 text-blacks">{{__('front.Best')}}</span>
                             </li>
                             
                         </ul>

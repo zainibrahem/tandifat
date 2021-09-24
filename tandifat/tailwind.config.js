@@ -10,11 +10,21 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      float: ['responsive', 'direction'],
+      margin: ['responsive', 'direction'],
+      padding: ['responsive', 'direction'],
+      textAlign: ['responsive', 'direction'],
+      left: ['responsive', 'direction'],
+      right: ['responsive', 'direction'],
+      transform: ['responsive', 'direction'],
+      translate: ['responsive', 'direction'],
+      flexDirection: ['responsive', 'direction'],
+      
+    }
   },
   plugins: [
-    require('tailwindcss-rtl'),
-
+    require('tailwindcss-dir')(),
   ],
   theme:{
     extend:{
@@ -34,7 +44,8 @@ module.exports = {
       },
       padding:{
         '100px':'100px',
-        '80px':'80px'
+        '80px':'80px',
+        '60px':'60px'
       },
       height:"70vh",
       margin:{
