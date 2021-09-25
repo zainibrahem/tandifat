@@ -47,7 +47,9 @@ module.exports = {
         '80px':'80px',
         '60px':'60px'
       },
-      height:"70vh",
+      height:{
+        '3':"0.75rem"
+      },
       margin:{
         '100px':'100px'
       },
@@ -63,6 +65,7 @@ module.exports = {
         'hoverback' :'#F6F6F6',
         'secondary': '#ffed4a',
         'danger': '#e3342f',
+        'blacks':'#3B3B3B'
        })
     }
   

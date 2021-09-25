@@ -66,3 +66,27 @@ button{
     border-bottom-left-radius: 45px;
     left:101%;
 }
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top:50% !important;
+    transform: translateY(-50%) !important;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background: url('../imgs/placeholder 1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px !important;
+    height: 20px !important;
+    left: 7px !important;
+    right: auto !important;
+}
+.select2-selection--single{
+    background: linear-gradient(180deg, #BB3A7D 0%, #107774 100%) !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius:10px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius:0px !important;
+    flex-direction: row-reverse !important;
+    
+}
