@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     @if(App::getLocale() == 'ar')
         <link rel="stylesheet" href="{{asset('css/arabic.css')}}">  
     @endif
@@ -33,6 +35,7 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js" defer></script>
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 @php 
@@ -679,5 +682,8 @@ if(App::getLocale()=='ar'){
             
         })
     </script>   
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>

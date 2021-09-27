@@ -8,7 +8,7 @@
     
     
     
-    <div class="carousel relative shadow-2xl bg-white">
+    <div class="carousel relative shadow-2xl bg-white" style="min-height:450px">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
@@ -25,12 +25,12 @@
                     @endif
                     
                         <div class="absolute bg-black top-0 left-0 opacity-50 h-full w-full z-10"></div>
-                        <span class="relative rtl:text-right ltr:text-left text-xs md:text-4xl z-20  font-bold">Consequat mattis.</span>
-                        <span class="text-xxs md:text-3xl relative ltr:text-left rtl:text-right z-20 w-10/12 md:w-2/3 mt-1 md:mt-4">Lorem ipsum dolor
+                        <span data-aos="fade-up"  data-aos-duration="1000" class="relative rtl:text-right ltr:text-left text-xs md:text-4xl z-20  font-bold">Consequat mattis.</span>
+                        <span data-aos-delay="300" data-aos="fade-up"  data-aos-duration="1000" class="text-xxs md:text-3xl relative ltr:text-left rtl:text-right z-20 w-10/12 md:w-2/3 mt-1 md:mt-4">Lorem ipsum dolor
                             sit amet, consectetur adipiscing
                             elit. Quam facilisis eget id amet nulla. Feugiat in.
                         </span>
-                        <button
+                        <button data-aos-delay="600" data-aos="fade-up"  data-aos-duration="1000"
                             class="rounded-full relative z-20 text-white text-xxs md:text-xl w-20 md:w-36 mt-1 md:mt-4 py-1 md:py-2 bg-primary">TRY
                             IT</button>
                     </div>
@@ -100,19 +100,11 @@
 
     </div>
 
-{{-- <svg class="absolute right-0 top-1/2 z-0" width="271" height="358" viewBox="0 0 271 358" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.3">
-    <circle opacity="0.6" cx="179" cy="179" r="83.2394" stroke="#BB3A7D" stroke-width="10"/>
-    <circle opacity="0.8" cx="179" cy="179" r="120.216" stroke="#BB3A7D" stroke-width="10"/>
-    <circle opacity="0.9" cx="179" cy="179" r="174" stroke="#BB3A7D" stroke-width="10"/>
-    </g>
-</svg>
-     --}}
-     <div class="w-full relative" style="min-height:600px;" dir="ltr">
+     <div class="w-full relative"  style="min-height:600px;" dir="ltr">
         <div class="w-10/12 md:w-full md:px-12 relative left-1/2 transform -translate-x-1/2">
             <div class="products" >
                 <div class="owl-carousel carousel1">
-                    <div class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
+                    <div data-aos="fade-up"  data-aos-duration="1000" class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
                         <div class="paddings relative">
                             <svg class="absolute addCart hidden cursor-pointer right-4" width="35" height="35"
                                 viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -162,7 +154,7 @@
                         <button class="bg-primary text-sm w-full py-2 mt-2 text-center text-white hidden addCart">Add to
                             Cart</button>
                     </div>
-                    <div class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
+                    <div data-aos="fade-up"  data-aos-duration="1000" class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
                         <div class="paddings relative">
                             <svg class="absolute addCart hidden cursor-pointer right-4" width="35" height="35"
                                 viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -212,7 +204,7 @@
                         <button class="bg-primary text-sm w-full py-2 mt-2 text-center text-white hidden addCart">Add to
                             Cart</button>
                     </div>
-                    <div class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
+                    <div data-aos="fade-up"  data-aos-duration="1000" class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
                         <div class="paddings relative">
                             <svg class="absolute addCart hidden cursor-pointer right-4" width="35" height="35"
                                 viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -262,7 +254,7 @@
                         <button class="bg-primary text-sm w-full py-2 mt-2 text-center text-white hidden addCart">Add to
                             Cart</button>
                     </div>
-                    <div class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
+                    <div data-aos="fade-up"  data-aos-duration="1000" class="flex w-10/12 flex-col justify-between items-stretch pro-item overflow-hidden">
                         <div class="paddings relative">
                             <svg class="absolute addCart hidden cursor-pointer right-4" width="35" height="35"
                                 viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -314,13 +306,13 @@
                     </div>
                 </div>
             </div>
-            <button class="relative left-1/2 transform -translate-x-1/2 text-white bg-blues rounded-3xl w-48 h-11 mt-4 md:mt-12">
+            <button  class="relative left-1/2 transform -translate-x-1/2 text-white bg-blues rounded-3xl w-48 h-11 mt-4 md:mt-12">
                 {{__('front.Discover More')}}
             </button>
         </div>
     </div>
     <div class="relative w-full grid grid-cols-12 gap-4 px-4 md:px-12 mt-12">
-        <div class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
+        <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
         style="background:url({{asset('imgs/badges/left1.png')}});background-size:cover">
         <h1 class="text-xl md:text-5xl font-bold text-white">
             {{__('front.Sale of')}} 50 %
@@ -334,7 +326,7 @@
             {{__('front.Order Now')}}
         </button>
         </div>
-        <div class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
+        <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
             style="background:url({{asset('imgs/badges/left1.png')}});background-size:cover">
             <h1 class="text-xl md:text-5xl font-bold text-white">
                 {{__('front.Sale of')}} 50 %
@@ -351,7 +343,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
-    <div class="w-full relative" dir="ltr">
+    <div class="w-full relative"  dir="ltr">
 
 
         <div class="flex justify-around items-center mt-8 w-full relative left-1/2 transform -translate-x-1/2">
@@ -367,7 +359,7 @@
                 <div class=" py-16 px-8 text-center mx-auto ">
                     <div x-show="activeTab===0" class="relative left-1/2 transform -translate-x-1/2" >
                         <div class="owl-carousel carousel2">
-                            <div class="flex w-8/12 md:w-2/3 flex-col justify-between items-center">
+                            <div data-aos="fade-up" class="flex w-8/12 md:w-2/3 flex-col justify-between items-center">
                                 <img src="{{asset('imgs/shops/shop.png')}}" alt="" class="rounded w-full">
                                 <h1 class="text-3xl text-center mt-4  text-blacks" style="font-weight: 700">
                                     Shop Name
@@ -399,7 +391,7 @@
                                     </a>
                                 </h1>
                             </div>
-                            <div class="flex w-8/12 flex-col justify-between items-center">
+                            <div data-aos="fade-up" class="flex w-8/12 flex-col justify-between items-center">
                                 <img src="{{asset('imgs/shops/shop.png')}}" alt="" class="rounded w-full">
                                 <h1 class="text-3xl text-center mt-4  text-blacks" style="font-weight: 700">
                                     Shop Name
@@ -431,7 +423,7 @@
                                     </a>
                                 </h1>
                             </div>
-                            <div class="flex w-8/12 flex-col justify-between items-center">
+                            <div data-aos="fade-up" class="flex w-8/12 flex-col justify-between items-center">
                                 <img src="{{asset('imgs/shops/shop.png')}}" alt="" class="rounded w-full">
                                 <h1 class="text-3xl text-center mt-4  text-blacks" style="font-weight: 700">
                                     Shop Name
@@ -798,12 +790,12 @@
         <div class="relative">
             <img class="w-full" src="{{asset('imgs/slider/slide1.png')}}" alt="">
             <div class="absolute bg-black bg-opacity-60 h-full flex flex-col justify-around items-start md:pl-12 rtl:pr-12 ltr:pl-12 py-24 md:py-24 w-full top-0 left-0">
-                <h1 class="text-white text-sm md:text-4xl">Proin enim.</h1>
-                <h1 class="text-white rtl:text-right text-xs md:text-5xl mt-4 hidden md:block" style="font-weight:700;letter-spacing:2rem">TITLE</h1>
-                <h1 class="text-white rtl:text-right text-xs md:text-5xl mt-4 block md:hidden" style="font-weight:700;letter-spacing:14px">TITLE</h1>
-                <p class="text-white text-xxs md:text-xl mt-4 " style="">Lorem Ipsum is simply dummy text of the printing </p>
-                <p class="text-white text-xxs md:text-xl mt-4 " style="">Lorem Ipsum is simply dummy text of the printing </p>
-                <button class="bg-primary w-24 h-12 md:w-96 md:h-16 mt-4 text-white text-sm md:text-3xl rounded-full">{{__('front.Order Now')}}</button>
+                <h1 data-aos="fade-up"  data-aos-duration="1000" class="text-white text-sm md:text-4xl">Proin enim.</h1>
+                <h1 data-aos-delay="300" data-aos="fade-up"  data-aos-duration="1000" class="text-white rtl:text-right text-xs md:text-5xl mt-4 hidden md:block" style="font-weight:700;letter-spacing:2rem">TITLE</h1>
+                <h1 data-aos-delay="600" data-aos="fade-up"  data-aos-duration="1000" class="text-white rtl:text-right text-xs md:text-5xl mt-4 block md:hidden" style="font-weight:700;letter-spacing:14px">TITLE</h1>
+                <p  data-aos-delay="900" data-aos="fade-up"  data-aos-duration="1000" class="text-white text-xxs md:text-xl mt-4 " style="">Lorem Ipsum is simply dummy text of the printing </p>
+                <p  data-aos-delay="1200" data-aos="fade-up"  data-aos-duration="1000" class="text-white text-xxs md:text-xl mt-4 " style="">Lorem Ipsum is simply dummy text of the printing </p>
+                <button data-aos-delay="1500" data-aos="fade-up"  data-aos-duration="1000" class="bg-primary w-24 h-12 md:w-96 md:h-16 mt-4 text-white text-sm md:text-3xl rounded-full">{{__('front.Order Now')}}</button>
             </div>
         </div>
         <div class="relative z-10 flex flex-col justify-around items-start">
@@ -815,7 +807,7 @@
     <div class="w-full relative" dir="ltr">
         <div class="w-11/12 flex justify-center items-center relative left-1/2 transform -translate-x-1/2">
             <div class="grid grid-cols-12 gap-4 w-full relative">
-                <div class="col-span-12 md:col-span-3">
+                <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class="bg-white p-4 flex flex-col justify-between items-center"
                         style="box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);border-radius:40px;">
                         <svg width="151" height="164" viewBox="0 0 171 184" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -878,7 +870,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class="bg-white p-4 flex flex-col justify-between items-center"
                         style="box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -951,7 +943,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class="bg-white p-4 flex flex-col justify-between items-center"
                         style="box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1014,7 +1006,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class="bg-white p-4 flex flex-col justify-between items-center"
                         style="box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1135,27 +1127,27 @@
     <div class="w-full 2xl:h-96 p-10 md:px-20 relative py-12 mt-64 flex flex-col md:flex-row justify-between items-center"
         style="background: linear-gradient(180deg, #BB3A7D 0%, #14ABA7 100%);">
         <div class="flex flex-col justify-center items-start">
-            <h1 class="text-4xl text-white">
+            <h1 data-aos="fade-up"  data-aos-duration="1000" class="text-4xl text-white">
                 {{__('front.Download Our App Now')}}
             </h1>
             <div class="mt-8">
-                <p class="text-white text-xl">
+                <p data-aos-delay="300" data-aos="fade-up"  data-aos-duration="1000" class="text-white text-xl">
                     Lorem Ipsum is simply dummy text of the printing
                 </p>
-                <p class="text-white text-xl mt-2">
+                <p data-aos-delay="600" data-aos="fade-up"  data-aos-duration="1000" class="text-white text-xl mt-2">
                     Lorem Ipsum is simply dummy text of the printing
                 </p>
             </div>
         </div>
         <div class="flex flex-col justify-center  items-center md:items-end">
-            <div class="relative w-80 md:w-96 mt-8">
+            <div  data-aos="fade-up"  data-aos-duration="1000" class="relative w-80 md:w-96 mt-8">
                 <input type="text" class="bg-white rounded-full h-12 w-80 md:w-96 pl-6" placeholder="{{__('front.Mobile Number')}}">
                 <button class="absolute right-0 bg-primary rounded-full text-white h-12 w-28 md:w-40 text-center text-md md:text-xl">
                     {{__('front.Send Link')}}
                 </button>
             </div>
-            <img class="hidden md:block absolute w-72 left-1/2 transform rtl:-translate-x-2/3 ltr:-translate-x-1/3" src="{{asset('imgs/mobile.png')}}" alt="">
-            <div class="flex px-12 md:px-0 justify-between items-center w-96 mt-4">
+            <img  class="hidden md:block absolute w-72 left-1/2 transform rtl:-translate-x-2/3 ltr:-translate-x-1/3" src="{{asset('imgs/mobile.png')}}" alt="">
+            <div data-aos-delay="300" data-aos="fade-up"  data-aos-duration="1000" class="flex px-12 md:px-0 justify-between items-center w-96 mt-4">
                 <img class="w-28 md:w-44" src="{{asset('imgs/google.png')}}" alt="">
                 <img class="w-24 md:w-40" src="{{asset('imgs/apple.png')}}" alt="">
             </div>
@@ -1164,7 +1156,7 @@
 
     <div class="relative w-full grid grid-cols-12 gap-4 px-4 md:px-12  mt-40 ">
         
-            <div class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
+        <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
             style="background:linear-gradient(0deg, rgba(187, 58, 125, 0.5), rgba(187, 58, 125, 0.5)),url({{asset('imgs/badges/left1.png')}});background-size:cover">
             <h1 class="text-xl md:text-5xl font-bold text-white">
                 {{__('front.Sale of')}} 50 %
@@ -1177,7 +1169,7 @@
                 {{__('front.Order Now')}}
             </button>
         </div>
-        <div class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
+        <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-6 px-6 md:px-12 h-60 md:h-96 bg-red-500 flex flex-col justify-end items-start"
             style="background:linear-gradient(0deg, rgba(187, 58, 125, 0.5), rgba(187, 58, 125, 0.5)),url({{asset('imgs/badges/left1.png')}});background-size:cover">
             <h1 class="text-xl md:text-5xl font-bold text-white">
                 {{__('front.Sale of')}} 50 %
@@ -1199,7 +1191,7 @@
     <div class="w-full relative" dir="ltr">
         <div class="w-10/12 flex justify-center items-center relative left-1/2 transform -translate-x-1/2">
             <div class="grid grid-cols-12 gap-4 w-full relative">
-                <div class="col-span-12 md:col-span-3">
+                <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class=" p-4 flex flex-col justify-between items-center" style="border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 202 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -1255,7 +1247,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class=" p-4 flex flex-col justify-between items-center" style="border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -1325,7 +1317,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class=" p-4 flex flex-col justify-between items-center" style="border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 202 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -1414,7 +1406,7 @@
                         </button>
                     </div>
                 </div>
-                <div class="col-span-12 md:col-span-3">
+                <div  data-aos="fade-up"  data-aos-duration="1000" class="col-span-12 md:col-span-3">
                     <div class=" p-4 flex flex-col justify-between items-center" style="border-radius:40px;">
                         <svg width="164" height="164" viewBox="0 0 203 203" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
