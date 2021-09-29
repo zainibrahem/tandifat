@@ -30,6 +30,7 @@ module.exports = {
     extend:{
       colors:{
         primary : '#BB3A7D',
+        secondarys:'#F178B6',
         transparent: 'transparent',
         current: 'currentColor',
         carousel:'#14ABA7',
@@ -58,6 +59,9 @@ module.exports = {
       },
       borderWidth:{
         '1':'1px'
+      },
+      width:{
+        '11/4':'24%'
       },
       backgroundColor: theme => ({
         ...theme('colors'),

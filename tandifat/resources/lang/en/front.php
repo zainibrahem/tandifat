@@ -49,6 +49,9 @@ return [
  'Work With US'=>'Work With US',
  'Subscribe our Newsletter'=>'Subscribe our Newsletter',
  '2021 Tandifat. All Rights Reserved'=>'2021 Tandifat. All Rights Reserved',
- 'What do you need?'=>'What do you need?'
+ 'What do you need?'=>'What do you need?',
+ 'All Categories'=>'All Categories',
+ 'Shops'=>'Shops',
+ 'Featured Products'=>'Featured Products'
 
 ];

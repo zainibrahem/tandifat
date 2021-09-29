@@ -16,18 +16,21 @@ use Illuminate\Support\Facades\Config;
 Route::get('/', function () {
     return view('Home');
 });
+Route::get('/categories', function () {
+    return view('categories');
+});
+// Route::get('/categories', 'HomeController@categories')->name('categories');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['web']], function () {
+    Route::get('/lang/{lang}',function($lang){
+        if (in_array($lang, \Config::get('app.locales'))) {
+            Session::put('locale', $lang);
 
-Route::get('/lang/{lang}',function($lang){
-    if (in_array($lang, \Config::get('app.locales'))) {
-        Session::put('locale', $lang);
-
-      }
-      return redirect()->back();
-});
+        }
+        return redirect()->back();
+    });
 });
