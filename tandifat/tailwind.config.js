@@ -61,7 +61,8 @@ module.exports = {
         '1':'1px'
       },
       width:{
-        '11/4':'24%'
+        '11/4':'24%',
+        '100':'26rem'
       },
       backgroundColor: theme => ({
         ...theme('colors'),

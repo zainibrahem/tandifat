@@ -311,7 +311,26 @@ border-bottom-right-radius: 45px;
 }
 .nav-opened{
     animation: openNav 1s forwards;
-  }
+}
+.hover-me{
+    height:100px;
+}
+.polygons{
+    width:20px;
+    height:20px;
+    position: absolute;
+    background: url('../imgs/icons/Polygon.png');
+    background-size: cover;
+    top: 38%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+.hover-me:hover .polygons{
+    display: block !important;
+}
+.hover-me:hover .sub-menu{
+    display: block !important;
+}
   @keyframes closeNav{
     0%{
         transform:translateX(0%)

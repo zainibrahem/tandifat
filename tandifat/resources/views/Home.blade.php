@@ -31,7 +31,7 @@
                             elit. Quam facilisis eget id amet nulla. Feugiat in.
                         </span>
                         <button data-aos-delay="600" data-aos="fade-up"  data-aos-duration="1000"
-                            class="rounded-full relative z-20 text-white text-xxs md:text-xl w-20 md:w-36 mt-1 md:mt-4 py-1 md:py-2 bg-primary">TRY
+                            class="rounded-full shows relative z-20 text-white text-xxs md:text-xl w-20 md:w-36 mt-1 md:mt-4 py-1 md:py-2 bg-primary">TRY
                             IT</button>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         fill="#F5F5F5" />
                 </svg>
             </label>
-
+            @include('partials.modal')
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">

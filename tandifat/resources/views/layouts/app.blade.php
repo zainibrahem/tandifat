@@ -861,5 +861,13 @@
         })
 
     </script>
+    <script>
+        $('.shows').click(function(){
+            $('.modal').show()
+        })
+        $('.closes').click(function(){
+            $('.modal').hide()
+        })
+    </script>
 </body>
 </html>

@@ -503,12 +503,5 @@
     <!-- This example requires Tailwind CSS v2.0+ -->
     @include('partials.modal')
 
-<script>
-    $('.shows').click(function(){
-        $('.modal').show()
-    })
-    $('.closes').click(function(){
-        $('.modal').hide()
-    })
-</script>
+
   @endsection

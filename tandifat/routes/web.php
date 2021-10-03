@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('/categories', function () {
     return view('categories');
 });
+Route::get('/subcategories', function () {
+    return view('subCat');
+});
 // Route::get('/categories', 'HomeController@categories')->name('categories');
 
 Auth::routes();
